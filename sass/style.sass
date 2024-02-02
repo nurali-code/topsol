@@ -16,7 +16,7 @@ main
     background-repeat: no-repeat
     background-position: center center
     background-size: cover
-    padding: 0 22px 60px
+    padding: 0 22px 170px
     img
         width: 100%
         max-width: 625px
@@ -32,8 +32,8 @@ main
 h1
     font-family: 'Dark Hornet' , sans-serif
     font-size: 120px
-    line-height: 53%
-    margin: 0 0 50px
+    line-height: 73%
+    margin: 0 0 20px
 
 p
     font-size: 27px
@@ -43,9 +43,12 @@ p
 
 .andrew
     display: block
-    width: 230px
+    width: 350px
     margin: 0 auto
     object-fit: contain
+    position: relative
+    top: 90px
+    z-index: -1
 
 .wrap
     display: flex
@@ -65,16 +68,38 @@ p
                 max-width: 43px
 
 @media screen and ( max-width: 920px )
+    main
+        padding: 50px 20px 100px
+        background-image: url('../img/main-mob.jpg')
+
+    .logo
+        font-size: 30px
+        top: 10px
+
     h1
         font-size: 92px
 
+    .andrew
+        top: 68px
+
 @media screen and ( max-width: 710px )
-    .logo
-        font-size: 40px
-        top: 16px
+
+    .andrew
+        top: 68px
+        max-width: 270px
+
 
     h1
-        font-size: 70px
+        font-size: 82px
 
     p
         font-size: 20px
+
+    .btn
+        font-size: 22px
+        padding: 12px 52px 12px 32px
+        i
+            display: none
+
+        img
+            width: 20px
