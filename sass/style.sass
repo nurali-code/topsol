@@ -1,0 +1,59 @@
+@import 'normolize'
+@import 'fonts'
+@import 'elements'
+
+main
+    position: relative
+    z-index: 1
+    min-height: 100vh
+    min-height: 100lvh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    background-image: url('../img/main.jpg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    padding: 0 22px
+    img 
+        width: 100%
+        max-width: 625px
+
+.logo 
+    position: absolute
+    top: 18px
+    left: 50%
+    transform: translateX(-50%)
+    font-family: 'Dark Hornet' , sans-serif
+    font-size: 50px
+
+h1 
+    font-family: 'Dark Hornet' , sans-serif
+    font-size: 120px
+    margin: 0 0 20px
+    color: #fff
+
+p 
+    font-size: 27px
+    font-weight: 400
+    max-width: 500px
+    margin: 0 auto 50px
+
+@media screen and ( max-width: 920px )
+    h1
+        font-size: 92px
+
+@media screen and ( max-width: 710px )
+    .logo
+        font-size: 40px
+        top: 16px 
+
+    h1 
+        font-size: 70px
+
+    p 
+        font-size: 20px
+
+    
