@@ -16,12 +16,12 @@ main
     background-repeat: no-repeat
     background-position: center center
     background-size: cover
-    padding: 0 22px
-    img 
+    padding: 0 22px 60px
+    img
         width: 100%
         max-width: 625px
 
-.logo 
+.logo
     position: absolute
     top: 18px
     left: 50%
@@ -29,17 +29,40 @@ main
     font-family: 'Dark Hornet' , sans-serif
     font-size: 50px
 
-h1 
+h1
     font-family: 'Dark Hornet' , sans-serif
     font-size: 120px
-    margin: 0 0 20px
-    color: #fff
+    line-height: 53%
+    margin: 0 0 50px
 
-p 
+p
     font-size: 27px
     font-weight: 400
     max-width: 500px
-    margin: 0 auto 50px
+    margin: 0 auto 40px
+
+.andrew
+    display: block
+    width: 230px
+    margin: 0 auto
+    object-fit: contain
+
+.wrap
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    padding: 20px 0 0
+    a
+        display: inline-block
+        padding: 10px
+        img
+            display: block
+            max-width: 40px
+
+        &:last-child
+            img
+                max-width: 43px
 
 @media screen and ( max-width: 920px )
     h1
@@ -48,12 +71,10 @@ p
 @media screen and ( max-width: 710px )
     .logo
         font-size: 40px
-        top: 16px 
+        top: 16px
 
-    h1 
+    h1
         font-size: 70px
 
-    p 
+    p
         font-size: 20px
-
-    

@@ -28,39 +28,64 @@ img
 
 a,
 button
-    color: $second
+    color: #fff
     text-decoration: none
     transition: all ease .2s
     background-color: transparent
     &:active
         transform: scale(.98)
 
-    &:hover
-        color: $prime
 
 .btn
     display: inline-block
-    font-size: 16px
+    font-size: 26px
     font-style: normal
     font-weight: 500
     line-height: 150%
-    letter-spacing: 0.16px
     border: 1px solid black
-    padding: 10px 22px
+    padding: 10px 62px 10px 32px
     text-align: center
-    border-radius: 30px
-    background-color: rgba(white, .2)
+    border-radius: 50px
+    background: rgb(254,1,255)
+    background: linear-gradient(90deg, rgba(254,1,255,1) 0%, rgba(1,254,255,1) 100%)
     color: black
     margin-bottom: 20px
-    &:hover,
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &::after
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: rgba(1,254,255,1)
+        background: linear-gradient(90deg, rgba(1,254,255,1) 0%, rgba(254,1,255,1) 100%)
+        z-index: -1
+        opacity: 0 
+        transition: all ease .4s
+        animation: opac 1s ease alternate-reverse infinite
+    &:hover
+        &::after
+            opacity: 1
+
     &:active
-        opacity: 1
-        color: $prime
 
     img
-        width: 20px
+        width: 25px
         display: inline-block
         vertical-align: middle
         margin-left: 20px
-        position: relative
-        left: 5px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 20px
+
+@keyframes opac
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+        

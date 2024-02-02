@@ -16,14 +16,32 @@
 <body>
     <main>
         <span class="logo">TOPSOL</span>
+        <img src="img/andrew-tate.png" class="andrew" alt="andrew tate">
         <h1>TOPSOL TOKEN</h1>
         <p>
-            TOKEN AND COMMUNITY that will help 
+            TOKEN AND COMMUNITY that will help
             you gain great financial income.
         </p>
-        <img src="img/wind.png" alt="wind">
-
+        <button class="btn" onclick="copyText()" data-copy="12qweqw1231d234dJI&182bw3or12UIH&*78">
+            12qweqw1231d234<i>dJI&182bw3or12UIH&*78</i>
+            <img src="img/ic-copy.svg" alt="copy">
+        </button>
+        <div class="wrap">
+            <a href="#" target="_blank"><img src="img/cc.png" alt="cc"></a>
+            <a href="#" target="_blank"><img src="img/tg.png" alt="tf"></a>
+        </div>
     </main>
+
+    <script>
+        function copyText() {
+            var button = document.querySelector('.btn');
+            var dataToCopy = button.getAttribute('data-copy');
+            navigator.clipboard.writeText(dataToCopy)
+                .then(function () { alert('Текст скопирован: ' + dataToCopy); })
+                .catch(function (err) { console.error('Не удалось скопировать: ', err); });
+        }
+    </script>
+
 </body>
 
 </html>
